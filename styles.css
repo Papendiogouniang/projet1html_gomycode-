@@ -1,0 +1,180 @@
+/* Importation de la police Roboto */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+
+/* Couleurs principales */
+:root {
+    --primary-color: #007bff;
+    --secondary-color: #333;
+    --background-color: #f9f9f9;
+    --text-color: #333;
+    --white: #fff;
+}
+
+/* Réinitialisation des styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Corps du site */
+body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+/* Barre de navigation */
+header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    background: rgba(0, 0, 0, 0.8);
+    padding: 15px 0;
+    text-align: center;
+    z-index: 1000;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: var(--white);
+    font-weight: bold;
+    padding: 10px 15px;
+    transition: all 0.3s ease-in-out;
+    border-radius: 5px;
+}
+
+nav ul li a:hover {
+    background: var(--primary-color);
+    color: var(--white);
+}
+
+/* Sections */
+section {
+    text-align: center;
+    padding: 80px 20px;
+    background-color: var(--white);
+    margin: 20px auto;
+    width: 80%;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Accueil */
+#home h1 {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+}
+
+#home p {
+    font-size: 1.2rem;
+}
+
+/* Section vidéo */
+#video iframe {
+    width: 80%;
+    max-width: 600px;
+    height: 350px;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+/* Liste des projets */
+#work ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#work ul li {
+    background: var(--primary-color);
+    color: var(--white);
+    padding: 15px;
+    margin: 5px 0;
+    border-radius: 5px;
+    width: 60%;
+    text-align: center;
+    transition: all 0.3s ease-in-out;
+}
+
+#work ul li:hover {
+    background: var(--secondary-color);
+}
+
+/* Tableau du CV */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th, td {
+    padding: 15px;
+    text-align: center;
+    border: 1px solid #ddd;
+}
+
+th {
+    background-color: var(--primary-color);
+    color: var(--white);
+}
+
+/* Formulaire de contact */
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    width: 100%;
+}
+
+input, textarea {
+    width: 80%;
+    padding: 10px;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    transition: all 0.3s ease-in-out;
+}
+
+input:focus, textarea:focus {
+    border-color: var(--primary-color);
+    outline: none;
+}
+
+button {
+    background-color: var(--primary-color);
+    color: var(--white);
+    padding: 12px 20px;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: var(--secondary-color);
+}
+
+/* Pied de page */
+footer {
+    text-align: center;
+    background-color: var(--secondary-color);
+    color: var(--white);
+    padding: 20px 0;
+    margin-top: 20px;
+}
+
