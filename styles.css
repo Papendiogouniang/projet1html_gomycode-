@@ -1,180 +1,270 @@
-/* Importation de la police Roboto */
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+/* styles.css */
 
-/* Couleurs principales */
-:root {
-    --primary-color: #007bff;
-    --secondary-color: #333;
-    --background-color: #f9f9f9;
-    --text-color: #333;
-    --white: #fff;
-}
+/* Importer la police Roboto depuis Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 
-/* Réinitialisation des styles */
-* {
+/* Appliquer la police Roboto à l'ensemble du document */
+body {
+    font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-    font-family: 'Roboto', sans-serif;
+    background-color: #f8f9fa; /* Fond clair et doux */
+    color: #333; /* Couleur du texte */
+    line-height: 1.6; /* Espacement des lignes */
 }
 
-/* Corps du site */
-body {
-    background-color: var(--background-color);
-    color: var(--text-color);
-    line-height: 1.6;
-}
-
-/* Barre de navigation */
+/* Style de la barre de navigation */
 header {
-    position: fixed;
-    width: 100%;
-    top: 0;
-    background: rgba(0, 0, 0, 0.8);
-    padding: 15px 0;
-    text-align: center;
-    z-index: 1000;
+    background-color: #2c3e50; /* Bleu foncé */
+    padding: 10px 0; /* Espacement interne */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Ombre légère */
 }
 
 nav ul {
-    list-style: none;
-    display: flex;
-    justify-content: center;
-    gap: 20px;
+    list-style-type: none; /* Supprimer les puces */
+    margin: 0;
+    padding: 0;
+    display: flex; /* Afficher les éléments en ligne */
+    justify-content: center; /* Centrer les éléments */
 }
 
 nav ul li {
-    display: inline;
+    margin: 0 15px; /* Espacement entre les éléments */
 }
 
 nav ul li a {
-    text-decoration: none;
-    color: var(--white);
-    font-weight: bold;
-    padding: 10px 15px;
-    transition: all 0.3s ease-in-out;
-    border-radius: 5px;
+    color: #ecf0f1; /* Blanc cassé */
+    text-decoration: none; /* Supprimer le soulignement des liens */
+    padding: 10px 20px; /* Espacement interne */
+    display: block; /* Rendre le lien cliquable sur toute la zone */
+    font-weight: bold; /* Texte en gras */
+    transition: background-color 0.3s ease; /* Transition fluide */
 }
 
 nav ul li a:hover {
-    background: var(--primary-color);
-    color: var(--white);
+    background-color: #3498db; /* Bleu vif au survol */
+    border-radius: 5px; /* Bordures arrondies */
 }
 
-/* Sections */
-section {
-    text-align: center;
-    padding: 80px 20px;
-    background-color: var(--white);
-    margin: 20px auto;
-    width: 80%;
-    border-radius: 10px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+/* Style de la section vidéo */
+#video {
+    text-align: center; /* Centrer le contenu */
+    padding: 40px 20px; /* Espacement interne */
+    background-color: #3498db; /* Bleu vif */
+    color: #fff; /* Texte blanc */
 }
 
-/* Accueil */
+#video h2 {
+    font-size: 2.5em; /* Taille de la police */
+    margin-bottom: 20px; /* Espacement sous le titre */
+}
+
+#video iframe {
+    max-width: 100%; /* Responsive */
+    height: auto; /* Hauteur automatique */
+    border: none; /* Supprimer la bordure */
+    border-radius: 10px; /* Bordures arrondies */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Ombre portée */
+}
+
+/* Style de la section d'accueil */
+#home {
+    text-align: center; /* Centrer le contenu */
+    padding: 80px 20px; /* Espacement interne */
+    background-color: #ecf0f1; /* Blanc cassé */
+}
+
 #home h1 {
-    font-size: 2.5rem;
-    color: var(--primary-color);
+    font-size: 3em; /* Taille de la police */
+    margin-bottom: 10px; /* Espacement sous le titre */
+    color: #2c3e50; /* Bleu foncé */
 }
 
 #home p {
-    font-size: 1.2rem;
+    font-size: 1.2em; /* Taille de la police */
+    color: #7f8c8d; /* Gris doux */
 }
 
-/* Section vidéo */
-#video iframe {
-    width: 80%;
-    max-width: 600px;
-    height: 350px;
-    border-radius: 10px;
-    margin-top: 20px;
+/* Style de la section À propos */
+#about {
+    padding: 80px 20px; /* Espacement interne */
+    background-color: #fff; /* Fond blanc */
+    text-align: center; /* Centrer le contenu */
 }
 
-/* Liste des projets */
+#about h2 {
+    font-size: 2.5em; /* Taille de la police */
+    margin-bottom: 20px; /* Espacement sous le titre */
+    color: #2c3e50; /* Bleu foncé */
+}
+
+#about p {
+    font-size: 1.1em; /* Taille de la police */
+    max-width: 800px; /* Largeur maximale */
+    margin: 0 auto; /* Centrer le paragraphe */
+    color: #7f8c8d; /* Gris doux */
+}
+
+/* Style de la section Projets */
+#work {
+    padding: 80px 20px; /* Espacement interne */
+    background-color: #3498db; /* Bleu vif */
+    text-align: center; /* Centrer le contenu */
+    color: #fff; /* Texte blanc */
+}
+
+#work h2 {
+    font-size: 2.5em; /* Taille de la police */
+    margin-bottom: 20px; /* Espacement sous le titre */
+}
+
 #work ul {
-    list-style-type: none;
+    list-style-type: none; /* Supprimer les puces */
     padding: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
 }
 
 #work ul li {
-    background: var(--primary-color);
-    color: var(--white);
-    padding: 15px;
-    margin: 5px 0;
-    border-radius: 5px;
-    width: 60%;
-    text-align: center;
-    transition: all 0.3s ease-in-out;
+    font-size: 1.2em; /* Taille de la police */
+    margin: 15px 0; /* Espacement entre les éléments */
+    background-color: rgba(255, 255, 255, 0.1); /* Fond semi-transparent */
+    padding: 10px; /* Espacement interne */
+    border-radius: 5px; /* Bordures arrondies */
+    transition: transform 0.3s ease; /* Animation au survol */
 }
 
 #work ul li:hover {
-    background: var(--secondary-color);
+    transform: scale(1.05); /* Agrandir légèrement */
 }
 
-/* Tableau du CV */
-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 20px;
+/* Style de la section CV */
+#resume {
+    padding: 80px 20px; /* Espacement interne */
+    background-color: #fff; /* Fond blanc */
+    text-align: center; /* Centrer le contenu */
 }
 
-th, td {
-    padding: 15px;
-    text-align: center;
-    border: 1px solid #ddd;
+#resume h2 {
+    font-size: 2.5em; /* Taille de la police */
+    margin-bottom: 20px; /* Espacement sous le titre */
+    color: #2c3e50; /* Bleu foncé */
 }
 
-th {
-    background-color: var(--primary-color);
-    color: var(--white);
+#resume table {
+    width: 100%; /* Largeur maximale */
+    max-width: 800px; /* Limiter la largeur */
+    margin: 0 auto; /* Centrer le tableau */
+    border-collapse: collapse; /* Fusionner les bordures */
 }
 
-/* Formulaire de contact */
-form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 15px;
-    width: 100%;
+#resume th, #resume td {
+    padding: 10px; /* Espacement interne */
+    border: 1px solid #ddd; /* Bordures légères */
 }
 
-input, textarea {
-    width: 80%;
-    padding: 10px;
-    border: 2px solid #ddd;
-    border-radius: 5px;
-    transition: all 0.3s ease-in-out;
+#resume th {
+    background-color: #3498db; /* Bleu vif */
+    color: #fff; /* Texte blanc */
 }
 
-input:focus, textarea:focus {
-    border-color: var(--primary-color);
-    outline: none;
+#resume td {
+    background-color: #f8f9fa; /* Fond clair */
 }
 
-button {
-    background-color: var(--primary-color);
-    color: var(--white);
-    padding: 12px 20px;
-    border: none;
-    cursor: pointer;
-    transition: 0.3s;
-    border-radius: 5px;
+/* Style de la section Contact */
+/* styles.css */
+
+/* Style de la section Contact */
+#contact {
+    padding: 80px 20px; /* Espacement interne */
+    background: linear-gradient(135deg, #2c3e50, #34495e); /* Dégradé de bleu foncé */
+    text-align: center; /* Centrer le contenu */
+    color: #fff; /* Texte blanc */
+    border-radius: 20px; /* Bordures arrondies */
+    margin: 40px auto; /* Espacement externe et centrage */
+    max-width: 1200px; /* Largeur maximale */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3); /* Ombre portée */
 }
 
-button:hover {
-    background-color: var(--secondary-color);
+#contact h2 {
+    font-size: 2.5em; /* Taille de la police */
+    margin-bottom: 20px; /* Espacement sous le titre */
+    color: #fff; /* Texte blanc */
 }
 
-/* Pied de page */
+#contact form {
+    max-width: 500px; /* Largeur maximale */
+    margin: 0 auto; /* Centrer le formulaire */
+    text-align: left; /* Aligner le texte à gauche */
+    background-color: rgba(255, 255, 255, 0.1); /* Fond semi-transparent */
+    padding: 30px; /* Espacement interne */
+    border-radius: 15px; /* Bordures arrondies */
+    backdrop-filter: blur(10px); /* Effet de flou */
+    border: 1px solid rgba(255, 255, 255, 0.2); /* Bordure légère */
+}
+
+#contact label {
+    display: block; /* Afficher les labels en bloc */
+    margin: 10px 0 5px; /* Espacement externe */
+    font-weight: bold; /* Texte en gras */
+    color: #fff; /* Texte blanc */
+}
+
+#contact input, #contact textarea {
+    width: 100%; /* Largeur maximale */
+    padding: 8px; /* Espacement interne */
+    margin-bottom: 15px; /* Espacement sous les champs */
+    border: 1px solid rgba(255, 255, 255, 0.3); /* Bordure légère */
+    border-radius: 8px; /* Bordures arrondies */
+    font-size: 1em; /* Taille de la police */
+    background-color: rgba(255, 255, 255, 0.1); /* Fond semi-transparent */
+    color: #fff; /* Texte blanc */
+    transition: border-color 0.3s ease, background-color 0.3s ease; /* Transition fluide */
+}
+
+#contact input::placeholder, #contact textarea::placeholder {
+    color: rgba(255, 255, 255, 0.7); /* Couleur du placeholder */
+}
+
+#contact input:focus, #contact textarea:focus {
+    border-color: #3498db; /* Bleu vif au focus */
+    background-color: rgba(255, 255, 255, 0.2); /* Fond plus clair au focus */
+    outline: none; /* Supprimer le contour par défaut */
+}
+
+#contact textarea {
+    resize: vertical; /* Permettre le redimensionnement vertical */
+    min-height: 150px; /* Hauteur minimale */
+}
+
+#contact button {
+    background-color: #3498db; /* Bleu vif */
+    color: white; /* Texte blanc */
+    padding: 12px 25px; /* Espacement interne */
+    border: none; /* Supprimer la bordure */
+    border-radius: 8px; /* Bordures arrondies */
+    cursor: pointer; /* Curseur en forme de main */
+    font-size: 1em; /* Taille de la police */
+    font-weight: bold; /* Texte en gras */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Transition fluide */
+}
+
+#contact button:hover {
+    background-color: #2980b9; /* Bleu plus foncé au survol */
+    transform: translateY(-2px); /* Légère élévation au survol */
+}
+
+#contact button:active {
+    transform: translateY(0); /* Retour à la position initiale au clic */
+}
+/* Style du pied de page */
 footer {
-    text-align: center;
-    background-color: var(--secondary-color);
-    color: var(--white);
-    padding: 20px 0;
-    margin-top: 20px;
+    text-align: center; /* Centrer le contenu */
+    padding: 20px; /* Espacement interne */
+    background-color: #2c3e50; /* Bleu foncé */
+    color: white; /* Texte blanc */
+    margin-top: 20px; /* Espacement externe */
 }
 
+footer p {
+    margin: 0; /* Supprimer la marge par défaut */
+}
